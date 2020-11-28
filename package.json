@@ -1,0 +1,12 @@
+{
+  "name": "clean-api",
+  "version": "1.0.0",
+  "description": "[![alt text](./assets-readme/logo-course.png \"Link para o treinamento\")](https://www.udemy.com/course/tdd-com-mango/?referralCode=B53CE5CA2B9AFA5A6FA1)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
