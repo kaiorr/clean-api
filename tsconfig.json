@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    //import export
+    "module": "commonjs",
+    //Version JS conversion in production
+    "target": "es2019",
+    "esModuleInterop": true,
+    //configuration javascript folder dist
+    "allowJs": true
+  }
+}
