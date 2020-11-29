@@ -1,12 +1,16 @@
 {
   "compilerOptions": {
-    "outDir": "./dist",
-    //import export
+    "outDir": "dist",
     "module": "commonjs",
-    //Version JS conversion in production
-    "target": "es2019",
+    "target": "es2020",
     "esModuleInterop": true,
-    //configuration javascript folder dist
-    "allowJs": true
-  }
+    "sourceMap": true,
+    "rootDir": "src",
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"]
+    }
+  },
+  "include": ["src"],
+  "exclude": []
 }
