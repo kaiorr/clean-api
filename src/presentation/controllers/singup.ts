@@ -2,7 +2,7 @@ import { AddAccount } from './../../domain/usecases/add-account'
 import { Controller } from './../protocols/controller'
 import { HttpRequest, HttpResponse } from '../protocols/http'
 import { MissingParamError, InvalidParamError } from '../errors'
-import { badRequest, serverError } from '../helpers/http-helper'
+import { badRequest, serverError, ok } from '../helpers/http-helper'
 import { EmailValidator } from '../protocols/email-validator'
 
 export class SingUpController implements Controller {
@@ -40,10 +40,7 @@ export class SingUpController implements Controller {
         email,
         password
       })
-      return {
-        statusCode: 200,
-        body: account
-      }
+      return ok(account)
     } catch (error) {
       return serverError()
     }
