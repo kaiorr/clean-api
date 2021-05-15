@@ -31,7 +31,7 @@ export class SingUpController implements Controller {
       if (password !== passwordConfirm) {
         return badRequest(new InvalidParamError('passwordConfirm'))
       }
-      const isValid = this.emailValidator.isValid(email)
+      const isValid = await this.emailValidator.isValid(email)
       if (!isValid) {
         return badRequest(new InvalidParamError('email'))
       }
@@ -42,6 +42,7 @@ export class SingUpController implements Controller {
       })
       return ok(account)
     } catch (error) {
+      console.error(error)
       return serverError()
     }
   }
